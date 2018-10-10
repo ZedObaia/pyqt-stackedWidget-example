@@ -18,12 +18,15 @@
     <item>
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="page">
        <layout class="QVBoxLayout" name="verticalLayout_3">
         <item>
          <widget class="QLabel" name="label">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(253, 255, 99);</string>
+          </property>
           <property name="text">
            <string>Page 1</string>
           </property>
@@ -38,6 +41,9 @@
        <layout class="QVBoxLayout" name="verticalLayout_2">
         <item>
          <widget class="QLabel" name="label_2">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(53, 255, 154);</string>
+          </property>
           <property name="text">
            <string>Page 2</string>
           </property>
@@ -85,8 +91,26 @@
      <height>32</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuEmployers">
+    <property name="title">
+     <string>Emp&amp;loyers</string>
+    </property>
+    <addaction name="actionPage1"/>
+    <addaction name="actionPage2"/>
+   </widget>
+   <addaction name="menuEmployers"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionPage1">
+   <property name="text">
+    <string>&amp;Page1</string>
+   </property>
+  </action>
+  <action name="actionPage2">
+   <property name="text">
+    <string>Pa&amp;ge2</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>

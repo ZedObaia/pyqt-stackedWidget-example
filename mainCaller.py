@@ -10,8 +10,10 @@ class mainWindow(QMainWindow, Ui_MainWindow):
         self.setupUi(self)
         self.stackedWidget.setCurrentIndex(0)
 
-        self.nextBtn.clicked.connect(lambda x : self.stackedWidget.setCurrentIndex(1))
-        self.backBtn.clicked.connect(lambda x : self.stackedWidget.setCurrentIndex(0))
+        self.nextBtn.clicked.connect(lambda : self.stackedWidget.setCurrentIndex(1))
+        self.backBtn.clicked.connect(lambda : self.stackedWidget.setCurrentIndex(0))
+        self.actionPage1.triggered.connect(lambda : self.stackedWidget.setCurrentIndex(0))
+        self.actionPage2.triggered.connect(lambda : self.stackedWidget.setCurrentIndex(1))
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
